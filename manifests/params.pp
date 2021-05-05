@@ -19,7 +19,7 @@ class selinux::params {
       }
       $rmmod = false
     }
-    'RedHat','CentOS','Scientific','Rocky':: {
+    'RedHat','CentOS','Scientific','Rocky': {
       if versioncmp($::operatingsystemrelease, '8') >= 0 {
         $package_audit2allow = 'policycoreutils-python-utils'
         $restorecond = true
